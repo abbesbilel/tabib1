@@ -1,0 +1,73 @@
+.filter-nav::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.filter-nav {
+    scrollbar-width: none;
+    width: 1015px;
+    margin-left: 70px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.filter-nav img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 15px;
+}
+
+.filter-button {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 20px;
+}
+
+.filter-button.outline {
+    background-color: white;
+    border: 1.5px solid #6a0dad;
+    color: #1a1a1a;
+    font-weight: 400;
+    size: 18px;
+    line-height: 28px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    background-color: #6a0dad;
+    /* Fond violet au survol ou au focus */
+    color: white;
+    /* Texte blanc */
+}
+
+.filter-button.purple {
+    background-color: #6a0dad;
+    /* Fond violet par défaut */
+    color: white;
+    /* Texte blanc */
+}
+
+.filter-button.purple:hover,
+.filter-button.purple:focus {
+    background-color: #5a008c;
+    /* Violet plus foncé au survol */
+}
+
+.filter-button:active {
+    background-color: #6a0dad;
+    /* Fond violet au clic */
+    color: white;
+    /* Texte blanc au clic */
+}
+
+/* Pour s'assurer que les boutons ne sont pas trop petits sur mobile */
+@media (max-width: 640px) {
+    .filter-button {
+        padding: 0.5rem 0.75rem;
+    }
+}

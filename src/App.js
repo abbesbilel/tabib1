@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Sign from './page/Sign'
+import Signup from './page/SignUp';
+import Personal from './page/Personal';
+import Professional from './page/Professional';
+import Practiceinformation from './page/Practiceinformation';
+import Socialmedia from './page/Socialmedia';
+import Avail from './page/Avail';
+import Days from './page/Days';
+import Mapa from './page/Mapa';
+import Choice from './page/Choice';
+import Appoin from './page/Appoin';
+import Selection from './page/Selection';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Sign />}></Route>
+        <Route path='/Signup' element={<Signup />}></Route>
+        <Route path='/Personalinformations' element={<Personal />}></Route>
+        <Route path='/Professionalinformation' element={<Professional />}></Route>
+        <Route path='/Practiceinformation' element={<Practiceinformation />}></Route>
+        <Route path='/socialmedia' element={<Socialmedia />}></Route>
+        <Route path='/avail' element={<Avail />}></Route>
+        <Route path='/days' element={<Days />}></Route>
+        <Route path='/map' element={<Mapa />}></Route>
+        <Route path='/choice' element={<Choice />}></Route>
+        <Route path='/appoint' element={<Appoin />}></Route>
+        <Route path='/selection' element={<Selection />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;
