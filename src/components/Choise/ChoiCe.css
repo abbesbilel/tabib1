@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    font-family: "Open Sans", serif;
+}
+
+body {
+    position: absolute;
+}
+
+.diagonal-container {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.left-side,
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #031432;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.left-side h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    size: 48px;
+    line-height: 54.54px;
+    text-align: center;
+}
+
+.right-side h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    size: 48px;
+    line-height: 54.54px;
+    text-align: center;
+}
+
+.left-side {
+    background-color: #ffffff;
+    left: -130px;
+
+}
+
+.right-side {
+    background-color: #CAF0F8;
+    left: -120px;
+
+}
+
+.diagonal-container::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: #ffffff;
+    transform: rotate(-45deg);
+    top: -50%;
+    left: -25%;
+    z-index: 0;
+}
+
+.orcontainer {
+    background-color: #6F3AFA;
+    width: 54px;
+    height: 44px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -383px;
+    top: -265px
+}
+
+.or {
+    color: white;
+    font-weight: 400;
+    size: 18px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.patient {
+    width: 273.85px;
+    height: 430.65px;
+}
+
+.doctor {
+    width: 238.1px;
+    height: 396.98px;
+}
+
+.register-container {
+    background-color: #3A8EF6;
+    width: 370px;
+    height: 59px;
+    border-radius: 9px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.register {
+    color: white;
+    width: 74px;
+    height: 25px;
+    font-weight: 700;
+    size: 18px;
+    line-height: 24.51px;
+    text-align: center;
+}

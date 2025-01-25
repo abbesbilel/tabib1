@@ -1,0 +1,25 @@
+body {
+    position: absolute;
+}
+
+.dztabib {
+    width: 119px;
+    height: 27px;
+    position: relative;
+    top: 20px;
+    left: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    size: 24px;
+    line-height: 27.27px;
+}
+
+.dztabib span {
+    width: 119px;
+    height: 27px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    size: 24px;
+    line-height: 27.27px;
+    color: #6F3AFA;
+}

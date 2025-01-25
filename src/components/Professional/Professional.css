@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    font-family: "Open Sans", serif;
+}
+
+body {
+    position: absolute;
+}
+
+.containeru {
+    width: 502px;
+    height: 514.46px;
+    background-color: white;
+    display: flex;
+    position: absolute;
+}
+
+.headeru {
+    width: 115px;
+    height: 36px;
+}
+
+.header2u {
+    position: relative;
+    top: 165px;
+    left: 20px;
+    background-color: white;
+
+}
+
+.header2u .signinu h1 {
+    margin-top: 0px;
+    width: 521px;
+    height: 55px;
+    font-weight: 700;
+    size: 48px;
+    line-height: 54.54px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header2u .signinu span {
+    color: #6F3AFA;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header2u .registeru {
+    width: 308px;
+    height: 56px;
+    font-weight: 400;
+    size: 18px;
+    line-height: 28px;
+}
+
+.header2u .registeru span {
+    color: #6F3AFA;
+    cursor: pointer;
+}
+
+.header2u .photou {
+    width: 457px;
+    height: 457px;
+    justify-content: center;
+}
+
+.container2uPP {
+    position: relative;
+    top: 200px;
+    left: 120px
+}
+
+.headeruP {
+    width: 400px;
+}
+
+.textu h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    size: 32px;
+    font-weight: 700;
+    line-height: 36.36px;
+    color: black;
+    margin-bottom: 0px;
+}
+
+
+.inputsu {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.inputu {
+    display: flex;
+}
+
+
+.inputufn .input1ufn {
+    width: 232px;
+    height: 62px;
+    background-color: #CAF0F8;
+    border-radius: 9px;
+    border-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.inputufn {
+    display: flex;
+    gap: 22px;
+}
+
+.inputu .input1u {
+    width: 502px;
+    height: 62px;
+    background-color: #CAF0F8;
+    border-radius: 9px;
+    border-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.inputu .input2u {
+    width: 502px;
+    height: 62px;
+    background-color: #CAF0F8;
+    border-radius: 9px;
+    border-color: transparent;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.forgetpassu p {
+    color: #6C87AE;
+    width: 369px;
+    height: 28px;
+    font-weight: 400;
+    size: 12px;
+    line-height: 28px;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 27px;
+    cursor: pointer;
+}
+
+.submit-containeruP {
+    display: flex;
+    cursor: pointer;
+    width: 502px;
+    margin-bottom: 50px;
+
+}
+
+.submit-containeruP .submituP {
+    color: white;
+    background-color: #3A8EF6;
+    border-radius: 9px;
+    width: 502px;
+    height: 59px;
+    font-weight: 700;
+    size: 18px;
+    line-height: 24.51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupu {
+    width: 502px;
+    height: 28px;
+    color: #828282;
+    font-weight: 400;
+    size: 16px;
+    line-height: 21.79px;
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.signupu span {
+    color: #6F3AFA;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.continueu {
+    height: 28px;
+    width: 502px;
+    font-weight: 400;
+    size: 18px;
+    line-height: 28px;
+    color: #6C87AE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.imagesuP {
+    width: 502px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 41.46px;
+    gap: 20px;
+    display: flex;
+    margin-bottom: 100px;
+
+}
+
+.imagesuP .fbu {
+    cursor: pointer;
+    width: 41.46px;
+}
+
+.imagesuP .googleu {
+    width: 41.46px;
+    cursor: pointer;
+}
+
+.cv-input-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 245px;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    cursor: pointer;
+    /* text-gray-400 */
+}
