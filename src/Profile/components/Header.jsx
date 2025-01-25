@@ -40,10 +40,12 @@ export default function Header() {
                     
                 </div>
                 {isDropdownVisible && (
+                        <Link to="/">
                         <div className="dropdown-menu" onClick={handleLogout}>
                             <button className="logout-button">Logout</button>
                             <i className="fa-solid fa-right-from-bracket"></i>
                         </div>
+                        </Link>
                     )}
             </div>
         </div>
