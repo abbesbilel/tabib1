@@ -35,6 +35,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
+        <Route path="/landingpage" element={<LandingPage />} />
       </Routes>
     </BrowserRouter>
   );

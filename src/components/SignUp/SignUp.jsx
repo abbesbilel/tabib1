@@ -157,7 +157,7 @@ const SignUp = () => {
                         {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
                     </div>
                     <div className="submit-containeru">
-                        <Link to="/choice"><div className="submitu" onClick={handleRegister}>
+                        <Link to="/landingpage"><div className="submitu" onClick={handleRegister}>
                             Register
                         </div>
                         </Link>

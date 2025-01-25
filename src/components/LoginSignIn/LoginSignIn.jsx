@@ -58,9 +58,13 @@ const LoginSignIn = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          <Link to="/forgotpass">
           <div className='forgetpass'><p>Forgot Password ?</p></div>
+          </Link>
           <div className='submit-container'>
+          <Link to="/landingpage">
             <div className='submit' onClick={handleLogin}>Login</div>
+          </Link>
           </div>
           <div className="signup">
             You don't have an account! <span><Link to="/choice">Sign Up</Link></span>
