@@ -137,6 +137,16 @@ const SignUp = () => {
                     <div className="inputu">
                         <input
                             className="input1u"
+                            type="text"
+                            placeholder="gender"
+                            name="gender"
+                            onChange={handleInputChange}
+                        />
+                        {errors.password && <p className="error">{errors.password}</p>}
+                    </div>
+                    <div className="inputu">
+                        <input
+                            className="input1u"
                             type="password"
                             placeholder="Password"
                             name="password"
@@ -145,6 +155,7 @@ const SignUp = () => {
                         />
                         {errors.password && <p className="error">{errors.password}</p>}
                     </div>
+                    
                     <div className="inputu">
                         <input
                             className="input1u"
