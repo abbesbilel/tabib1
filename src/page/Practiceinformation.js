@@ -8,9 +8,6 @@ const Practiceinformation = () => {
   return (
     <div>
       <div className="">
-            <div className='tabib'>
-                <DzTabib />
-            </div>
             <div className='login'>
                 <PracticeiNformation />
             </div>

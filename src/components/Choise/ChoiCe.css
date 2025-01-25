@@ -4,10 +4,6 @@
     font-family: "Open Sans", serif;
 }
 
-body {
-    position: absolute;
-}
-
 .diagonal-container {
     display: flex;
     position: absolute;
