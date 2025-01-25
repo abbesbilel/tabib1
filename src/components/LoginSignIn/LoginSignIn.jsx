@@ -35,7 +35,7 @@ const LoginSignIn = () => {
       </div>
       <div className='container2'>
         <div className='header'>
-          <div className='text'> <h2>Sign In</h2></div>
+          <div className='text'> <h2>login</h2></div>
           <div className='underline'></div>
         </div>
         <div className='inputs'>
