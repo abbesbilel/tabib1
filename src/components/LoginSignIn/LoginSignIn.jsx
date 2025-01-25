@@ -65,7 +65,7 @@ const LoginSignIn = () => {
             <div className='submit' onClick={handleLogin}>Login</div>
           </div>
           <div className="signup">
-            You don't have an account! <span><Link to="/Signup">Sign Up</Link></span>
+            You don't have an account! <span><Link to="/choice">Sign Up</Link></span>
           </div>
           <div className='continue'>
             Or continue with

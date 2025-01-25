@@ -119,7 +119,7 @@ const PersoNal = () => {
                             />
                         </div>
                         <div className="submit-containeruP">
-                            <Link to="/Socialmedia"><div className="submituP" onClick={handleSubmit}>
+                            <Link to="/professionalinformation"><div className="submituP" onClick={handleSubmit}>
                                 Next
                             </div>
                             </Link>

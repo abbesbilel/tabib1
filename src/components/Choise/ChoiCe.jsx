@@ -13,7 +13,7 @@ const ChoiCe = () => {
             <div className="left-side">
                 <h1>Patient</h1>
                 <img className='patient' src={patient} alt="Patien" />
-                <Link to="/Personalinformations"><div className="register-container">
+                <Link to="/Signup"><div className="register-container">
                     <div className="register">Register</div>
                 </div>
                 </Link>
@@ -21,7 +21,7 @@ const ChoiCe = () => {
             <div className="right-side">
                 <h1>Doctor</h1>
                 <img className='doctor' src={doctor} alt="Patien" />
-                <Link to="/Professionalinformation"><div className="register-container">
+                <Link to="/personalinformations"><div className="register-container">
                     <div className="register">Register</div>
                 </div>
                 </Link>
