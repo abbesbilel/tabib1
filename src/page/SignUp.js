@@ -6,7 +6,7 @@ import Registerhere from '../components/Registerhere/Registerhere';
 
 const Signup = () => {
     return (
-        <div className="container">
+        <div className="">
           <div className='tabib'>
             <DzTabib />
           </div>

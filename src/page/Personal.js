@@ -5,7 +5,7 @@ import PersoNal from '../components/Personal/Personal';
 
 const Personal = () => {
     return (
-        <div className="container">
+        <div className="">
             <div className='tabib'>
                 <DzTabib />
             </div>

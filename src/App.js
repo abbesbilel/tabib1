@@ -11,6 +11,10 @@ import Mapa from './page/Mapa';
 import Choice from './page/Choice';
 import Appoin from './page/Appoin';
 import Selection from './page/Selection';
+import ForgotPass from './Forgot/ForgotPass'
+import LandingPage from './Landing/LandingPage'
+import Profile from "./Profile/components/Profile"
+import Appointments from "./Profile/components/Appointments"
 
 function App() {
   return (
@@ -28,6 +32,9 @@ function App() {
         <Route path='/choice' element={<Choice />}></Route>
         <Route path='/appoint' element={<Appoin />}></Route>
         <Route path='/selection' element={<Selection />}></Route>
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/appointments" element={<Appointments />} />
+        <Route path="/forgotpass" element={<ForgotPass />} />
       </Routes>
     </BrowserRouter>
   );

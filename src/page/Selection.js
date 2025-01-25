@@ -3,7 +3,7 @@ import SeleCtion from '../components/Selection/SeleCtion'
 
 const Selection = () => {
   return (
-    <div className="container">
+    <div className="">
             <div className='login'>
                 <SeleCtion />
             </div>

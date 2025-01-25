@@ -5,7 +5,7 @@ import React from 'react'
 
 const Sign = () => {
     return (
-        <div className="container">
+        <div className="">
           <div className='tabib'>
             <DzTabib />
           </div>

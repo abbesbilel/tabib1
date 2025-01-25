@@ -6,7 +6,7 @@ import AvaIl from '../components/Avail/Avail';
 
 const Avail = () => {
     return (
-        <div className="container">
+        <div className="">
             <div className='tabib'>
                 <DzTabib />
             </div>

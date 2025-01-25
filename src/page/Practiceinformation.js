@@ -7,7 +7,7 @@ import PracticeiNformation from '../components/Practiceinformation/Practiceinfor
 const Practiceinformation = () => {
   return (
     <div>
-      <div className="container">
+      <div className="">
             <div className='tabib'>
                 <DzTabib />
             </div>

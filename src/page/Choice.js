@@ -4,7 +4,7 @@ import ChoiCe from '../components/Choise/ChoiCe';
 
 const Choice = () => {
     return (
-        <div className="container">
+        <div className="">
             <div className='tabib'>
                 <DzTabib />
             </div>

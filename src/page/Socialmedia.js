@@ -9,7 +9,7 @@ import SocialMedia from '../components/SocialMedia/SocialMedia';
 const Socialmedia = () => {
     return (
         <div>
-            <div className="container">
+            <div className="">
                 <div className='tabib'>
                     <DzTabib />
                 </div>

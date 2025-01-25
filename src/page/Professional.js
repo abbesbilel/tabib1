@@ -4,7 +4,7 @@ import ProfessioNal from '../components/Professional/Professional'
 
 const Professional = () => {
   return (
-    <div className="container">
+    <div className="">
             <div className='tabib'>
                 <DzTabib />
             </div>

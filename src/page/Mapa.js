@@ -4,7 +4,7 @@ import MaP from '../components/Map/MaP';
 
 const Mapa = () => {
     return (
-        <div className="container">
+        <div className="">
             <div className='tabib'>
                 <DzTabib />
             </div>

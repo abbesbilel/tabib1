@@ -4,7 +4,7 @@ import DaYs from '../components/Days/DaYs';
 
 const Days = () => {
     return (
-        <div className="container">
+        <div className="">
             <div className='tabib'>
                 <DzTabib />
             </div>
