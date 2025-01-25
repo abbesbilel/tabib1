@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import facebook from '../assets/Facebook.png';
 import google from '../assets/google.png';
@@ -76,7 +77,7 @@ const SignUp = () => {
                 <div className="registeru">
                     If you already have an account
                     <br />
-                    You can <span>Register here!</span>
+                    You can <Link to="/"><span>Register here!</span></Link>
                 </div>
                 <div className="photou">
                     <img className="phototabibu" src={tabib} alt="tabib" />
@@ -156,12 +157,13 @@ const SignUp = () => {
                         {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
                     </div>
                     <div className="submit-containeru">
-                        <div className="submitu" onClick={handleRegister}>
+                        <Link to="/choice"><div className="submitu" onClick={handleRegister}>
                             Register
                         </div>
+                        </Link>
                     </div>
                     <div className="signupu">
-                        You already have an account! <span>Sign In</span>
+                        You already have an account! <span><Link to="/">Sign In</Link></span>
                     </div>
                     <div className="continueu">Or continue with</div>
                     <div className="imagesu">

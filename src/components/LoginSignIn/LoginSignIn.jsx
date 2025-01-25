@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './LoginSignIn.css';
 import facebook from '../assets/Facebook.png';
@@ -28,7 +29,7 @@ const LoginSignIn = () => {
           <h1>Sign in to <span>DZ</span>TABIB</h1>
         </div>
         <div className='register'>
-          If you don't have an account<br />You can <span>Register here!</span>
+          If you don't have an account<br />You can <Link to="/Signup"><span>Register here!</span></Link>
         </div>
         <div className='photo'>
           <img className='phototabib' src={tabib} alt="tabib" />
@@ -63,7 +64,9 @@ const LoginSignIn = () => {
           <div className='submit-container'>
             <div className='submit' onClick={handleLogin}>Login</div>
           </div>
-          <div className='signup'>You don't have an account!<span>Sign Up</span></div>
+          <div className="signup">
+            You don't have an account! <span><Link to="/Signup">Sign Up</Link></span>
+          </div>
           <div className='continue'>
             Or continue with
           </div>

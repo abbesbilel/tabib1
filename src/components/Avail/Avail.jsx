@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './Avail.css';
 import tabib from '../assets/tabib.png';
@@ -33,7 +34,7 @@ const AvaIl = () => {
                             <h1>Sign Up to <span>DZ</span>TABIB</h1>
                         </div>
                         <div className="registeru">
-                            If you already have an account<br />You can <span>Register here!</span>
+                            If you already have an account<br />You can <Link to="/"><span>Register here!</span></Link>
                         </div>
 
                         <div className="photou">
@@ -88,9 +89,10 @@ const AvaIl = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            <div className="submit-containeruSoc">
+                            <Link to="/map"><div className="submit-containeruSoc">
                                 <div className="submituSoc" onClick={handleSubmit}>Next</div>
                             </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

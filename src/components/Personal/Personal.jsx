@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import facebook from '../assets/Facebook.png';
 import google from '../assets/google.png';
@@ -45,7 +46,7 @@ const PersoNal = () => {
                     <div className="registeru">
                         If you already have an account
                         <br />
-                        You can <span>Register here!</span>
+                        You can <Link to="/"><span>Register here!</span></Link>
                     </div>
                     <div className="photou">
                         <img className="phototabibu" src={tabib} alt="tabib" />
@@ -118,9 +119,10 @@ const PersoNal = () => {
                             />
                         </div>
                         <div className="submit-containeruP">
-                            <div className="submituP" onClick={handleSubmit}>
+                            <Link to="/Socialmedia"><div className="submituP" onClick={handleSubmit}>
                                 Next
                             </div>
+                            </Link>
                         </div>
                         <div className="continueu">Or continue with</div>
                         <div className="imagesuP">

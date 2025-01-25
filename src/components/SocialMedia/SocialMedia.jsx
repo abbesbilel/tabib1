@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import tabib from '../assets/tabib.png';
 import './SocialMedia.css';
@@ -64,7 +65,7 @@ const SocialMedia = () => {
                         <div className="registeru">
                             If you already have an account
                             <br />
-                            You can <span>Register here!</span>
+                            You can <Link to="/"><span>Register here!</span></Link>
                         </div>
 
                         <div className="photou">

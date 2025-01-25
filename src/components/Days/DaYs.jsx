@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './DaYs.css';
 import tabib from '../assets/tabib.png';
@@ -42,7 +43,7 @@ const DaYs = () => {
                         <div className="registeru">
                             If you already have an account
                             <br />
-                            You can <span>Register here!</span>
+                            You can <Link to="/"><span>Register here!</span></Link>
                         </div>
 
                         <div className="photou">
@@ -69,9 +70,10 @@ const DaYs = () => {
                                 ))}
                             </div>
                             <div className="submit-containeruday">
-                                <div className="submituday" onClick={saveGreenDays}>
+                                <Link to="/avail"><div className="submituday" onClick={saveGreenDays}>
                                     Next
                                 </div>
+                                </Link>
                             </div>
                         </div>
                     </div>

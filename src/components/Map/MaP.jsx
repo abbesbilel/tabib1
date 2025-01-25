@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import tabib from '../assets/tabib.png';
 import './MaP.css';
@@ -35,7 +36,7 @@ const MaP = () => {
                         <div className="registeru">
                             If you already have an account
                             <br />
-                            You can <span>Register here!</span>
+                            You can <Link to="/"><span>Register here!</span></Link>
                         </div>
                         <div className="photou">
                             <img className="phototabibu" src={tabib} alt="tabib" />
@@ -83,9 +84,10 @@ const MaP = () => {
                                 </div>
                             </div>
                             <div className="submit-containeruP">
-                                <div className="submituP" onClick={handleSubmit}>
+                                <Link to="/Socialmedia"><div className="submituP" onClick={handleSubmit}>
                                     Done
                                 </div>
+                                </Link>
                             </div>
                         </div>
                     </div>

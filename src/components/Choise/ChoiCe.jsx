@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import React from 'react'
 import './ChoiCe.css'
 import patient from '../assets/human1.png'
@@ -12,16 +13,18 @@ const ChoiCe = () => {
             <div className="left-side">
                 <h1>Patient</h1>
                 <img className='patient' src={patient} alt="Patien" />
-                <div className="register-container">
+                <Link to="/Personalinformations"><div className="register-container">
                     <div className="register">Register</div>
                 </div>
+                </Link>
             </div>
             <div className="right-side">
                 <h1>Doctor</h1>
                 <img className='doctor' src={doctor} alt="Patien" />
-                <div className="register-container">
+                <Link to="/Professionalinformation"><div className="register-container">
                     <div className="register">Register</div>
                 </div>
+                </Link>
                 <div className='orcontainer'><div className='or'>Or</div></div>
             </div>
         </div>
