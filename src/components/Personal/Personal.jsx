@@ -124,11 +124,6 @@ const PersoNal = () => {
                             </div>
                             </Link>
                         </div>
-                        <div className="continueu">Or continue with</div>
-                        <div className="imagesuP">
-                            <img className="fbu" src={facebook} alt="facebook" />
-                            <img className="googleu" src={google} alt="google" />
-                        </div>
                     </div>
                 </div>
             </div>

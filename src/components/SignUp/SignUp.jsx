@@ -165,11 +165,6 @@ const SignUp = () => {
                     <div className="signupu">
                         You already have an account! <span><Link to="/">Sign In</Link></span>
                     </div>
-                    <div className="continueu">Or continue with</div>
-                    <div className="imagesu">
-                        <img className="fbu" src={facebook} alt="facebook" />
-                        <img className="googleu" src={google} alt="google" />
-                    </div>
                 </div>
             </div>
         </div>

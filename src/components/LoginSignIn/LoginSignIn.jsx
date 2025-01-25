@@ -67,13 +67,6 @@ const LoginSignIn = () => {
           <div className="signup">
             You don't have an account! <span><Link to="/choice">Sign Up</Link></span>
           </div>
-          <div className='continue'>
-            Or continue with
-          </div>
-          <div className='images'>
-            <img className='fb' src={facebook} alt="facebook" />
-            <img className='google' src={google} alt="google" />
-          </div>
         </div>
       </div>
     </div>
