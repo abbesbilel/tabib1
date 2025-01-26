@@ -359,6 +359,16 @@
 .services-container {
     padding: 0 80px 120px;
 }
+@media (max-width: 768px) {
+    .services-container {
+        padding: 0 16px 120px;
+    }
+}
+@media (max-width: 1200px) {
+    .services-container {
+        padding: 0 40px 120px;
+    }
+}
 
 .services-container .service-cards-container {
     background-color: #5390D9;
@@ -366,10 +376,11 @@
     flex-wrap: wrap;
     padding: 60px 24px;
     border-radius: 30px;
-    gap: 80px;
+    gap: 60px;
     position: relative;
     overflow: hidden;
 }
+
 
 .services-container .service-cards-container::before {
     content: url(./components/assets/left.svg);
@@ -419,7 +430,7 @@
 }
 
 .doctor-card-container .doc-image {
-    min-width: 415px;
+    min-width: fill;
     width: 100%;
     height: 415px;
     background-color: #DAF8FF;
