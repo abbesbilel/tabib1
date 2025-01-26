@@ -15,6 +15,15 @@ import ForgotPass from './Forgot/ForgotPass'
 import LandingPage from './Landing/LandingPage'
 import Profile from "./Profile/components/Profile"
 import Appointments from "./Profile/components/Appointments"
+import Page from './components/Page';
+import Settings from './components/Settings';
+import Wrapper from './components/Wrapper';
+import Page2 from './components/Page2'
+import Page3 from './components/Page3'
+
+// Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
@@ -36,8 +45,26 @@ function App() {
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path="/landingpage" element={<LandingPage />} />
-      </Routes>
+          <Route
+            path="/page"
+            element={
+              <>
+                <Page />
+              </>
+            }
+          />
+
+          {/* Appointments Route */}
+          <Route path="/Page2" element={<Page2 />} />
+
+          {/* Settings Route */}
+          <Route path="/Page3" element={<Page3 />} />
+
+          {/* Wrapper Route */}
+        </Routes>
+      
     </BrowserRouter>
   );
 }
+
 export default App;

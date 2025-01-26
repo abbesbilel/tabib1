@@ -122,11 +122,13 @@ const SocialMedia = () => {
                                     onChange={handleInputChange}
                                 />
                             </div>
+                            <Link to="/Page">
                             <div className="submit-containeruSoc">
                                 <div className="submituSoc" onClick={handleSubmit}>
-                                    Next
+                                    Done
                                 </div>
                             </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
