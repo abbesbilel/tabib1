@@ -1,9 +1,7 @@
-import { Link } from 'react-router-dom';
+// SignUp.js (React frontend)
 import React, { useState } from 'react';
-import facebook from '../assets/Facebook.png';
-import google from '../assets/google.png';
-import tabib from '../assets/tabib.png';
-import './SignUp.css';
+import { Link } from 'react-router-dom';
+import './SignUp.css'; // Ensure you have the CSS file for styling
 
 const SignUp = () => {
     const [formData, setFormData] = useState({
@@ -13,10 +11,12 @@ const SignUp = () => {
         contact: '',
         password: '',
         confirmPassword: '',
+        gender: '',
     });
 
     const [errors, setErrors] = useState({});
-    const [message, setMessage] = useState(''); // Message dynamique
+    const [message, setMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -38,33 +38,64 @@ const SignUp = () => {
             newErrors.password = 'Password must be at least 6 characters.';
         if (formData.password !== formData.confirmPassword)
             newErrors.confirmPassword = 'Passwords do not match.';
+        if (!formData.gender.trim()) newErrors.gender = 'Gender is required.';
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleRegister = () => {
-        if (!validateForm()) {
-            setMessage('Please fix the errors above before registering.');
-            return;
-        }
+    
 
-        // Enregistrer les données (simulé ici avec console.log)
-        console.log('User Information:', formData);
-        setMessage('Registration successful!'); // Afficher le message de succès
+        const handleRegister = async () => {
+            if (!validateForm()) {
+                setMessage('Please fix the errors above before registering.');
+                return;
+            }
+        
+            setIsLoading(true);
+            try {
+                const response = await fetch('http://localhost:5000/auth/signUp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username: formData.username,
+                        email: formData.email,
+                        password: formData.password,
+                        first_name: formData.firstName,
+                        last_name: formData.lastName,
+                        date_of_birth: formData.dateOfBirth,
+                        account_type: 'patient',
+                        
+                        gender: formData.gender,
+                    }),
+                });
+                const data = await response.json();
 
-        // Réinitialiser le formulaire
-        setFormData({
-            firstName: '',
-            lastName: '',
-            email: '',
-            contact: '',
-            password: '',
-            confirmPassword: '',
-        });
-
-        setErrors({});
-    };
+                if (response.ok) {
+                    setMessage('Registration successful!');
+                    setFormData({
+                        firstName: '',
+                        lastName: '',
+                        username: '',
+                        email: '',
+                        contact: '',
+                        password: '',
+                        confirmPassword: '',
+                        gender: '',
+                    });
+                    setErrors({});
+                } else {
+                    setMessage(data.msg || 'Registration failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error during registration:', error);
+                setMessage('An error occurred. Please try again.');
+            } finally {
+                setIsLoading(false);
+            }
+        };
 
     return (
         <div className="containeru">
@@ -79,9 +110,6 @@ const SignUp = () => {
                     <br />
                     You can <Link to="/"><span>Register here!</span></Link>
                 </div>
-                <div className="photou">
-                    <img className="phototabibu" src={tabib} alt="tabib" />
-                </div>
             </div>
             <div className="container2u">
                 <div className="headeru">
@@ -90,7 +118,7 @@ const SignUp = () => {
                     </div>
                     <div className="underlineu"></div>
                 </div>
-                {message && <div className="message">{message}</div>} {/* Section pour afficher les messages */}
+                {message && <div className="message">{message}</div>}
                 <div className="inputsu">
                     <div className="inputufn">
                         <input
@@ -101,7 +129,9 @@ const SignUp = () => {
                             value={formData.firstName}
                             onChange={handleInputChange}
                         />
+
                         {errors.firstName && <p className="error">{errors.firstName}</p>}
+                       
                         <input
                             className="inpu"
                             type="text"
@@ -111,6 +141,18 @@ const SignUp = () => {
                             onChange={handleInputChange}
                         />
                         {errors.lastName && <p className="error">{errors.lastName}</p>}
+                    </div>
+                    <div className="inputu">
+                    <input
+                            className="input1u"
+                            type="text"
+                            placeholder="usernamee"
+                            name="username"
+                            value={formData.username}
+                            onChange={handleInputChange}
+                        />
+                         {errors.username && <p className="error">{errors.username}</p>}
+                        
                     </div>
                     <div className="inputu">
                         <input
@@ -134,15 +176,28 @@ const SignUp = () => {
                         />
                         {errors.contact && <p className="error">{errors.contact}</p>}
                     </div>
+                    
                     <div className="inputu">
                         <input
                             className="input1u"
                             type="text"
-                            placeholder="gender"
+                            placeholder="Gender"
                             name="gender"
+                            value={formData.gender}
                             onChange={handleInputChange}
                         />
-                        {errors.password && <p className="error">{errors.password}</p>}
+                        {errors.gender && <p className="error">{errors.gender}</p>}
+                    </div>
+                    <div className="inputu">
+                        <input
+                            className="input1u"
+                            type="date"
+                            placeholder="YYYY-MM-DD"
+                            name="dateOfBirth"
+                            value={formData.dateOfBirth}
+                            onChange={handleInputChange}
+                        />
+                        {errors.dateOfBirth && <p className="error">{errors.dateOfBirth}</p>}
                     </div>
                     <div className="inputu">
                         <input
@@ -155,7 +210,6 @@ const SignUp = () => {
                         />
                         {errors.password && <p className="error">{errors.password}</p>}
                     </div>
-                    
                     <div className="inputu">
                         <input
                             className="input1u"
@@ -168,10 +222,9 @@ const SignUp = () => {
                         {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
                     </div>
                     <div className="submit-containeru">
-                        <Link to="/landingpage"><div className="submitu" onClick={handleRegister}>
-                            Register
-                        </div>
-                        </Link>
+                        <button className="submitu" onClick={handleRegister} disabled={isLoading}>
+                            {isLoading ? 'Registering...' : 'Register'}
+                        </button>
                     </div>
                     <div className="signupu">
                         You already have an account! <span><Link to="/">Sign In</Link></span>

@@ -9,16 +9,47 @@ const LoginSignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   // Gestion de la soumission
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (!email || !password) {
       setError('Please fill in all fields.');
       return;
     }
+
+    setIsLoading(true);
     setError('');
-    console.log('Login submitted with:', { email, password });
-    // Ajoutez ici votre logique d'authentification
+
+    try {
+      const response = await axios.post('http://localhost:5000/auth/login', {
+        email,
+        password,
+      });
+
+      if (response.status === 200) {
+        // Login successful
+        const { accessToken } = response.data;
+        console.log('Login successful. Access Token:', accessToken);
+
+        // Save the access token to localStorage or context
+        localStorage.setItem('accessToken', accessToken);
+
+        // Redirect to the landing page or dashboard
+        window.location.href = '/landingpage';
+      }
+    } catch (error) {
+      if (error.response) {
+        // Handle errors from the backend
+        setError(error.response.data.msg || 'Login failed. Please try again.');
+      } else {
+        // Handle network errors
+        setError('An error occurred. Please check your connection and try again.');
+      }
+      console.error('Error during login:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -36,7 +67,7 @@ const LoginSignIn = () => {
       </div>
       <div className='container2'>
         <div className='header'>
-          <div className='text'> <h2>login</h2></div>
+          <div className='text'> <h2>Login</h2></div>
           <div className='underline'></div>
         </div>
         <div className='inputs'>
@@ -45,7 +76,7 @@ const LoginSignIn = () => {
             <input
               className='input1'
               type="email"
-              placeholder='enter email or username'
+              placeholder='Enter email or username'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -54,18 +85,18 @@ const LoginSignIn = () => {
             <input
               className='input2'
               type="password"
-              placeholder='password'
+              placeholder='Password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <Link to="/forgotpass">
-          <div className='forgetpass'><p>Forgot Password ?</p></div>
+            <div className='forgetpass'><p>Forgot Password ?</p></div>
           </Link>
           <div className='submit-container'>
-          <Link to="/landingpage">
-            <div className='submit' onClick={handleLogin}>Login</div>
-          </Link>
+            <button className='submit' onClick={handleLogin} disabled={isLoading}>
+              {isLoading ? 'Logging in...' : 'Login'}
+            </button>
           </div>
           <div className="signup">
             You don't have an account! <span><Link to="/choice">Sign Up</Link></span>
