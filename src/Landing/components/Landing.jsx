@@ -9,7 +9,7 @@ export default function Landing() {
                 <div className="text">
                 <p className='move-title'>Booking apointment online</p>
                 <h1>Many Doctors in several feilds At your service</h1>
-                <p className='caption-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum eget vel, nunc nulla feugiat. Metus ut.</p>
+                <p className='caption-text'>Many Doctors in various fields are at your service, ready to provide personalized care tailored to your needs. Whether you're seeking a routine check-up, specialized treatment, or expert advice, our team of experienced professionals is here to help. With just a few clicks, you can easily schedule your visit and take the first step toward better health.</p>
                 </div>
                 <BookingButton />
             </div>
