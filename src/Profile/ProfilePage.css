@@ -209,7 +209,7 @@
   }
   
   .profile-container .profile-info .input-box {
-    width: 510px;
+    /* width: 510px; */
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -217,6 +217,13 @@
     gap: 16px;
     border-radius: 16px;
     justify-content: center;
+  }
+
+  .profile-container .info-feild {
+    flex: 1;
+  }
+  .profile-container .personal-info {
+    flex: 1;
   }
   
   .profile-container .profile-info .input-box .info-message {

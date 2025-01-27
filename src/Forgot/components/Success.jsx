@@ -3,6 +3,7 @@ import sadDoctorImage from './assets/sad_doctor.png';
 import logoImage from './assets/DZTABIB.png';
 import check from './assets/upload.svg'
 import './Success.css'
+import { Link } from 'lucide-react';
 
 export default function Success() {
   return (
@@ -19,8 +20,10 @@ export default function Success() {
                 <div className='text-suc'>
                 <h1 className='title-suc'>Successful</h1>
                 <p className='p-suc'>Your password has been reset successfully</p>
+                
                 </div>
                 <button className='Next'>Next</button>
+                
                 </div>
         </div>
       
