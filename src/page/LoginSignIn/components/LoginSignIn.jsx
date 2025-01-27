@@ -21,36 +21,48 @@ const LoginSignIn = () => {
     setIsLoading(true);
     setError('');
 
-    try {
-      const response = await axios.post('http://localhost:5000/auth/login', {
-        email,
-        password,
-      });
 
-      if (response.status === 200) {
-        // Login successful
-        const { accessToken } = response.data;
-        console.log('Login successful. Access Token:', accessToken);
+    if (email === 'admin' && password === 'admin') {
+      // Special case for admin credentials: redirect to /page4
+      console.log('Admin login detected. Redirecting to /page4');
+      window.location.href = '/page4';
+      return; 
+    } else {
 
-        // Save the access token to localStorage or context
-        localStorage.setItem('accessToken', accessToken);
-
-        // Redirect to the landing page or dashboard
-        window.location.href = '/landingpage';
+      try {
+        const response = await axios.post('http://localhost:5000/auth/login', {
+          email,
+          password,
+        });
+  
+        if (response.status === 200) {
+          // Login successful
+          const { accessToken } = response.data;
+          console.log('Login successful. Access Token:', accessToken);
+  
+          // Save the access token to localStorage or context
+          localStorage.setItem('accessToken', accessToken);
+  
+          // Redirect to the landing page or dashboard
+          window.location.href = '/landingpage';
+        }
+      } catch (error) {
+        if (error.response) {
+          // Handle errors from the backend
+          setError(error.response.data.msg || 'Login failed. Please try again.');
+        } else {
+          // Handle network errors
+          setError('An error occurred. Please check your connection and try again.');
+        }
+        console.error('Error during login:', error);
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      if (error.response) {
-        // Handle errors from the backend
-        setError(error.response.data.msg || 'Login failed. Please try again.');
-      } else {
-        // Handle network errors
-        setError('An error occurred. Please check your connection and try again.');
-      }
-      console.error('Error during login:', error);
-    } finally {
-      setIsLoading(false);
+    };
+
+
     }
-  };
+
 
   return (
     <div className='containerr'>
