@@ -21,11 +21,21 @@ const SignUp = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        if (name === "gender" && value.length > 1) return; // Limit gender to one character
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
+
+        // Restrict gender input to only one letter and convert it to uppercase
+        if (name === 'gender') {
+            if (value.length <= 1) {
+                setFormData((prevData) => ({
+                    ...prevData,
+                    [name]: value.toUpperCase(),
+                }));
+            }
+        } else {
+            setFormData((prevData) => ({
+                ...prevData,
+                [name]: value,
+            }));
+        }
     };
 
     const validateForm = () => {
@@ -69,7 +79,7 @@ const SignUp = () => {
                     last_name: formData.lastName,
                     date_of_birth: formData.dateOfBirth,
                     account_type: 'patient',
-                    gender: formData.gender,
+                    gender: formData.gender, // Gender is already uppercase
                     contact: formData.contact,
                 }),
             });
@@ -180,7 +190,7 @@ const SignUp = () => {
                         <input
                             className="input1uu"
                             type="text"
-                            placeholder="Gender (M/F)"
+                            placeholder="Gender (1 letter)"
                             name="gender"
                             value={formData.gender}
                             onChange={handleInputChange}
