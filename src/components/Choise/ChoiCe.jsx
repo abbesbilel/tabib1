@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
 import './ChoiCe.css'
-import patient from '../assets/human1.png'
-import doctor from '../assets/human2.png'
+import patient from '../../assets/human1.png'
+import doctor from '../../assets/human2.png'
 
 
 

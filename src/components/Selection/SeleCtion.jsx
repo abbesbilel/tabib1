@@ -1,8 +1,8 @@
 import React from 'react'
 import './SeleCtion.css'
-import faceb from '../assets/face.png'
-import wattsup from '../assets/whatsapp.png'
-import select from '../assets/selection.png'
+import faceb from '../../assets/face.png'
+import wattsup from '../../assets/whatsapp.png'
+import select from '../../assets/selection.png'
 import DzTabib from '../DzTabib/DzTabib'
 import DoctorGrid from './DoctorGrid'
 

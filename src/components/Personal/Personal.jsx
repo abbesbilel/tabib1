@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import facebook from '../assets/Facebook.png';
-import google from '../assets/google.png';
-import tabib from '../assets/tabib.png';
+import tabib from '../../assets/tabib.png';
 import './Personal.css';
 
 const PersoNal = () => {

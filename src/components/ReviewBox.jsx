@@ -1,4 +1,4 @@
-import myImage from "../Images/avatar_1.png.png";
+import myImage from "../assets/avatar_1.png.png";
 import Stars from "./Stars";
 
 function ReviewBox() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import bookIcon from './assets/message-circle.svg'
+import bookIcon from '../../assets/message-circle.svg'
 import { Link } from 'react-router-dom';
 
 export default function BookingButton() {

@@ -1,9 +1,9 @@
 import React from 'react'
 import SectionHeader from './SectionHeader'
-import highIcon from './assets/high.svg'
-import hourIcon from './assets/24hour.svg'
-import TeleconsultationIcon from './assets/Teleconsultation.svg'
-import bookIcon from './assets/book.svg'
+import highIcon from '../../assets/high.svg'
+import hourIcon from '../../assets/24hour.svg'
+import TeleconsultationIcon from '../../assets/Teleconsultation.svg'
+import bookIcon from '../../assets/book.svg'
 
 export default function Services() {
     return (

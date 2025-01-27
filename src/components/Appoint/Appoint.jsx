@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Appoint.css'
 import axios from 'axios';
-import pose from '../assets/pose.png'
-import faceb from '../assets/face.png'
-import wattsup from '../assets/whatsapp.png'
+import pose from '../../assets/pose.png'
+import faceb from '../../assets/face.png'
+import wattsup from '../../assets/whatsapp.png'
 
 
 const Appoint = ({ doctorId, patientId }) => {

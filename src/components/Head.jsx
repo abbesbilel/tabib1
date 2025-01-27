@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBell, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
-import myImage from '../Images/0f7517ea1f04200fdf3155e7b0f7c49d.jpg'; 
+import myImage from '../assets/0f7517ea1f04200fdf3155e7b0f7c49d.jpg'; 
 
 // In your JSX
 

@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { PaperclipIcon as PaperClip } from 'lucide-react';
-import facebook from '../assets/Facebook.png';
-import google from '../assets/google.png';
-import tabib from '../assets/tabib.png';
+import tabib from '../../assets/tabib.png';
 import './Professional.css';
 
 const ProfessioNal = () => {

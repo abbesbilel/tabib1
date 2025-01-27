@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DoctorCard from './DoctorCard';
 import SectionHeader from './SectionHeader';
-import doctorImage from './assets/doctor.png';
-import testImage from './assets/test-doctor.png';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 

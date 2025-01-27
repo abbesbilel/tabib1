@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import profileImage from './assets/profile.png'
-import deleteImage from './assets/empty_profile_image.jpg'
+import profileImage from '../../assets/profile.png'
+import deleteImage from '../../assets/empty_profile_image.jpg'
 import Footer from "./Footer"
 import Header from "./Header"
 import '../ProfilePage.css'

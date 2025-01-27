@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import logoImage from './assets/DZTABIB.png'
-import profileImage from './assets/profile.png'
+import logoImage from '../../assets/DZTABIB.png'
+import profileImage from '../../assets/profile.png'
 import { Link } from 'react-router-dom';
 
 export default function Header() {

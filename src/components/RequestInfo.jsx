@@ -1,4 +1,4 @@
-import myImage from '../Images/avatar_2.png.png'; 
+import myImage from '../assets/avatar_2.png.png'; 
 import ButtonRequest from './ButtonRequest';
 function RequestInfo(props) {
     return (

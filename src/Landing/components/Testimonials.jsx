@@ -2,7 +2,7 @@ import React from 'react'
 import SectionHeader from './SectionHeader'
 import Commenter from './Commenter'
 import { useState, useEffect } from 'react'
-import profilePhoto from './assets/avatar.png'
+import profilePhoto from '../../assets/avatar.png'
 
 export default function Testimonials() {
 

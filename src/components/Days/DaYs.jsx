@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './DaYs.css';
-import tabib from '../assets/tabib.png';
+import tabib from '../../assets/tabib.png';
 
 const DaYs = () => {
     const [days, setDays] = useState([

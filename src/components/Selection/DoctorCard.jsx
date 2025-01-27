@@ -1,8 +1,8 @@
 import React from 'react';
 import './DoctorCard.css';
-import tabib from '../assets/rec.png'
-import chat from '../assets/chat.png'
-import chat2 from '../assets/chat2.png'
+import tabib from '../../assets/rec.png'
+import chat from '../../assets/chat.png'
+import chat2 from '../../assets/chat2.png'
 
 const DoctorCard = ({ name, specialty, rating, }) => {
     return (

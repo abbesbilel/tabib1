@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import sadDoctorImage from './assets/sad_doctor.png';
-import logoImage from './assets/DZTABIB.png';
+import sadDoctorImage from '../../assets/sad_doctor.png';
+import logoImage from '../../assets/DZTABIB.png';
 import './ResetPassword.css'
 
 const ResetPassword = ({ onNext }) => {

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import tabib from '../assets/tabib.png';
+import tabib from '../../assets/tabib.png';
 import './SocialMedia.css';
 
 const SocialMedia = () => {

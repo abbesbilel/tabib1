@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './Avail.css';
-import tabib from '../assets/tabib.png';
+import tabib from '../../assets/tabib.png';
 
 const AvaIl = () => {
     const [availability, setAvailability] = useState({
