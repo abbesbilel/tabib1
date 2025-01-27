@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import DoctorCard from './DoctorCard';
+import DoctorCard from '../../../components/DoctorCard';
 import SectionHeader from './SectionHeader';
 import axios from 'axios';
 import { Link } from 'react-router-dom';

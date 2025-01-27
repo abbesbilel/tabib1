@@ -1,8 +1,8 @@
 import React from 'react'
-import bookIcon2 from '../../../assets/message-circle2.svg'
-import BookingButton from './BookingButton'
+import bookIcon2 from '../assets/message-circle2.svg'
+import BookingButton from '../page/Landing/components/BookingButton'
 
-export default function DoctorCard({ name, rating, spec, photo }) {
+export default function DoctorCard({ name, spec, rating, photo }) {
 
     const filledStars = Math.floor(rating); // Whole number part (e.g., 4.2 -> 4 stars)
     const hasHalfStar = rating % 1 !== 0; // Check if there's a half star (e.g., 4.5 -> true)

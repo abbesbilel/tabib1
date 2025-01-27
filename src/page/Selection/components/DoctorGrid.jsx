@@ -1,13 +1,14 @@
 import React from 'react';
-import DoctorCard from './DoctorCard';
+import DoctorCard from '../../../components/DoctorCard';
 import './DoctorGrid.css';
+import tabib from '../../../assets/rec.png';
 
 const DoctorGrid = () => {
     const doctors = Array(9).fill({
         name: 'Dr. Lisa Chen, MD',
         specialty: 'Cardiologist',
         rating: 4,
-        imageUrl: '/placeholder.svg'
+        imageUrl: tabib
     });
 
     return (
@@ -16,9 +17,9 @@ const DoctorGrid = () => {
                 <DoctorCard
                     key={index}
                     name={doctor.name}
-                    specialty={doctor.specialty}
+                    spec={doctor.specialty}
                     rating={doctor.rating}
-                    imageUrl={doctor.imageUrl}
+                    photo={doctor.imageUrl}
                 />
             ))}
         </div>
