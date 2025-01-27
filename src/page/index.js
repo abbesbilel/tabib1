@@ -20,3 +20,5 @@ export { default as SignUp } from './SignUp/SignUp';
 export { default as SocialMedia } from './SocialMedia/Socialmedia';
 export { default as Success } from './Success/Success';
 export { default as VerifyCode } from './VerifyCode/VerifyCode';
+export { default as AdminOverview } from './AdminOverview/Page4';
+export { default as AdminPatient } from './AdminPatient/Page5';

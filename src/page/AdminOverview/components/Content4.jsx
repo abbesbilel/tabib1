@@ -1,16 +1,16 @@
-import Appointments from '../../../components/Appointments';
 import Head from '../../../components/Head';
+import Wrapper from '../../../components/Wrapper';
 
 function Content() {
   return (
     <>
       <div className="contentt w-full">
         {/* Start Head */}
-        <Head />
+        <Head title="admin"/>
         {/* End Head */}
 
         {/* Wrapper Component */}
-        <Appointments />
+        <Wrapper title="admin"/>
       </div>
     </>
   );

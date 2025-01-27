@@ -8,7 +8,7 @@ function Box(props) {
                     <>
                         <div className="between-flex mb-20">
                             <h2 className="p-relative">Appointment Request</h2>
-                            <button className="btn-view">view All {'>'}</button>
+                            {/* <button className="btn-view">view All {'>'}</button> */}
                         </div>
                         <RequestInfo state={"confirmed"} topic={props.topic}/>
                         <RequestInfo state={"declined"}  topic={props.topic}/>
@@ -17,12 +17,38 @@ function Box(props) {
                         <RequestInfo state={"declined"}  topic={props.topic}/>
                     </>
                 )}
+                {(props.topic === "doctors" || props.topic === "patients") && (
+                    <>
+                        <div className="between-flex mb-20">
+                            <h2 className="p-relative">{props.topic}</h2>
+                            {/* <button className="btn-view">view All {'>'}</button> */}
+                        </div>
+                        <RequestInfo state={"suspend"} topic={props.topic}/>
+                        <RequestInfo state={"suspend"}  topic={props.topic}/>
+                        <RequestInfo state={"suspend"}  topic={props.topic}/>
+                        <RequestInfo state={"suspend"}  topic={props.topic}/>
+                        <RequestInfo state={"suspend"}  topic={props.topic}/>
+                    </>
+                )}
+                {(props.topic === "suspended-doctors" || props.topic === "suspended-patients") && (
+                    <>
+                        <div className="between-flex mb-20">
+                            <h2 className="p-relative">{props.topic}</h2>
+                            {/* <button className="btn-view">view All {'>'}</button> */}
+                        </div>
+                        <RequestInfo state={"suspended-doctors"} topic={props.topic}/>
+                        <RequestInfo state={"suspended-doctors"}  topic={props.topic}/>
+                        <RequestInfo state={"suspended-doctors"}  topic={props.topic}/>
+                        <RequestInfo state={"suspended-doctors"}  topic={props.topic}/>
+                        <RequestInfo state={"suspended-doctors"}  topic={props.topic}/>
+                    </>
+                )}
 
                 {props.topic === "appointments" && (
                     <>
                         <div className="between-flex mb-20">
                             <h2 className="p-relative">Today Appointments</h2>
-                            <button className="btn-view">view All {'>'}</button>
+                            {/* <button className="btn-view">view All {'>'}</button> */}
                         </div>
                         <RequestInfo state={"date"}  topic={props.topic}/>
                         <RequestInfo state={"date"}  topic={props.topic}/>
