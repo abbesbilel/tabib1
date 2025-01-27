@@ -1,4 +1,3 @@
-// SignUp.js (React frontend)
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SignUp.css'; // Ensure you have the CSS file for styling
@@ -7,11 +6,13 @@ const SignUp = () => {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
+        username: '',
         email: '',
         contact: '',
         password: '',
         confirmPassword: '',
         gender: '',
+        dateOfBirth: '',
     });
 
     const [errors, setErrors] = useState({});
@@ -20,6 +21,7 @@ const SignUp = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
+        if (name === "gender" && value.length > 1) return; // Limit gender to one character
         setFormData((prevData) => ({
             ...prevData,
             [name]: value,
@@ -30,6 +32,7 @@ const SignUp = () => {
         const newErrors = {};
         if (!formData.firstName.trim()) newErrors.firstName = 'First name is required.';
         if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required.';
+        if (!formData.username.trim()) newErrors.username = 'Username is required.';
         if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email))
             newErrors.email = 'Valid email is required.';
         if (!formData.contact.trim() || formData.contact.length < 10)
@@ -39,63 +42,63 @@ const SignUp = () => {
         if (formData.password !== formData.confirmPassword)
             newErrors.confirmPassword = 'Passwords do not match.';
         if (!formData.gender.trim()) newErrors.gender = 'Gender is required.';
+        if (!formData.dateOfBirth.trim()) newErrors.dateOfBirth = 'Date of birth is required.';
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
 
-    
+    const handleRegister = async () => {
+        if (!validateForm()) {
+            setMessage('Please fix the errors above before registering.');
+            return;
+        }
 
-        const handleRegister = async () => {
-            if (!validateForm()) {
-                setMessage('Please fix the errors above before registering.');
-                return;
-            }
-        
-            setIsLoading(true);
-            try {
-                const response = await fetch('http://localhost:5000/auth/signUp', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        username: formData.username,
-                        email: formData.email,
-                        password: formData.password,
-                        first_name: formData.firstName,
-                        last_name: formData.lastName,
-                        date_of_birth: formData.dateOfBirth,
-                        account_type: 'patient',
-                        
-                        gender: formData.gender,
-                    }),
+        setIsLoading(true);
+        try {
+            const response = await fetch('http://localhost:5000/auth/signUp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: formData.username,
+                    email: formData.email,
+                    password: formData.password,
+                    first_name: formData.firstName,
+                    last_name: formData.lastName,
+                    date_of_birth: formData.dateOfBirth,
+                    account_type: 'patient',
+                    gender: formData.gender,
+                    contact: formData.contact,
+                }),
+            });
+            const data = await response.json();
+
+            if (response.ok) {
+                setMessage('Registration successful!');
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    username: '',
+                    email: '',
+                    contact: '',
+                    password: '',
+                    confirmPassword: '',
+                    gender: '',
+                    dateOfBirth: '',
                 });
-                const data = await response.json();
-
-                if (response.ok) {
-                    setMessage('Registration successful!');
-                    setFormData({
-                        firstName: '',
-                        lastName: '',
-                        username: '',
-                        email: '',
-                        contact: '',
-                        password: '',
-                        confirmPassword: '',
-                        gender: '',
-                    });
-                    setErrors({});
-                } else {
-                    setMessage(data.msg || 'Registration failed. Please try again.');
-                }
-            } catch (error) {
-                console.error('Error during registration:', error);
-                setMessage('An error occurred. Please try again.');
-            } finally {
-                setIsLoading(false);
+                setErrors({});
+            } else {
+                setMessage(data.msg || 'Registration failed. Please try again.');
             }
-        };
+        } catch (error) {
+            console.error('Error during registration:', error);
+            setMessage('An error occurred. Please try again.');
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     return (
         <div className="containeruu">
@@ -129,9 +132,7 @@ const SignUp = () => {
                             value={formData.firstName}
                             onChange={handleInputChange}
                         />
-
                         {errors.firstName && <p className="error">{errors.firstName}</p>}
-                       
                         <input
                             className="inpu"
                             type="text"
@@ -143,16 +144,15 @@ const SignUp = () => {
                         {errors.lastName && <p className="error">{errors.lastName}</p>}
                     </div>
                     <div className="inputu">
-                    <input
+                        <input
                             className="input1uu"
                             type="text"
-                            placeholder="usernamee"
+                            placeholder="Username"
                             name="username"
                             value={formData.username}
                             onChange={handleInputChange}
                         />
-                         {errors.username && <p className="error">{errors.username}</p>}
-                        
+                        {errors.username && <p className="error">{errors.username}</p>}
                     </div>
                     <div className="inputu">
                         <input
@@ -176,12 +176,11 @@ const SignUp = () => {
                         />
                         {errors.contact && <p className="error">{errors.contact}</p>}
                     </div>
-                    
                     <div className="inputu">
                         <input
                             className="input1uu"
                             type="text"
-                            placeholder="Gender"
+                            placeholder="Gender (M/F)"
                             name="gender"
                             value={formData.gender}
                             onChange={handleInputChange}
