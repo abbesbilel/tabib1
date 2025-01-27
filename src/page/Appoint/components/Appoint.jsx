@@ -4,6 +4,7 @@ import axios from 'axios';
 import pose from '../../../assets/pose.png'
 import faceb from '../../../assets/face.png'
 import wattsup from '../../../assets/whatsapp.png'
+import { Link } from 'react-router-dom';
 
 
 const Appoint = ({ doctorId, patientId }) => {
@@ -61,16 +62,23 @@ const Appoint = ({ doctorId, patientId }) => {
         <div className="app-container">
             {/* Header */}
             <header className="header-appoint">
+                
                 <div className="logo">
+                    
                     <span className="logo-dz">DZ</span>
+                    
+
                     <span className="logo-tabib">TABIB</span>
+                    
                 </div>
+                
                 <div className="search-bar">
                     <input
                         type="text"
                         placeholder="Search by doctor's name, specialty, or location."
                         className="search-input"
                     />
+                    
                     <div className="search-button"><div className='search-paragraphe'>Search</div></div>
                 </div>
             </header>

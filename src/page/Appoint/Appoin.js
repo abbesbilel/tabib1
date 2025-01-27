@@ -3,7 +3,7 @@ import Appoint from './components/Appoint'
 
 const Appoin = () => {
   return (
-    <div className="container">
+    <div className="">
             <div className='login'>
                 <Appoint />
             </div>
