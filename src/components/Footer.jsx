@@ -1,7 +1,7 @@
 import React from 'react'
-import logoImage from '../../assets/DZTABIB.png'
-import facebookIcon from '../../assets/facebook.svg'
-import whatsappIcon from '../../assets/whatsapp.svg'
+import logoImage from '../assets/DZTABIB.png'
+import facebookIcon from '../assets/facebook.svg'
+import whatsappIcon from '../assets/whatsapp.svg'
 
 export default function Footer() {
   return (

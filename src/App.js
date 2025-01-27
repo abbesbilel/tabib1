@@ -11,10 +11,10 @@ import Mapa from './page/Map/Mapa';
 import Choice from './page/Choise/Choice';
 import Appoin from './page/Appoint/Appoin';
 import Selection from './page/Selection/Selection';
-import ForgotPass from './Forgot/ForgotPass'
-import LandingPage from './Landing/LandingPage'
-import Profile from "./Profile/components/Profile"
-import Appointments from "./Profile/components/Appointments"
+import ForgotPass from './page/Forgot/ForgotPass'
+import LandingPage from './page/Landing/LandingPage'
+import Profile from "./page/Profile/Profile"
+import Appointments from "./page/Profile/components/Appointments"
 import Page from './page/DoctorOverview/Page';
 import Page2 from './page/DoctorAppointments/Page2'
 import Page3 from './page/DoctorSettings/Page3'

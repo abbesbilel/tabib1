@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import sadDoctorImage from '../../assets/sad_doctor.png';
-import logoImage from '../../assets/DZTABIB.png';
+import sadDoctorImage from '../../../assets/sad_doctor.png';
+import logoImage from '../../../assets/DZTABIB.png';
 import './VerifyCode.css';
 
 const VerifyCode = ({ onNext }) => {

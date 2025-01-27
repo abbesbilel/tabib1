@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import profileImage from '../../assets/profile.png'
 import deleteImage from '../../assets/empty_profile_image.jpg'
-import Footer from "./Footer"
-import Header from "./Header"
-import '../ProfilePage.css'
+import Footer from "../../components/Footer"
+import Header from "./components/Header"
+import './ProfilePage.css'
 
 export default function Profile() {
 
@@ -103,31 +103,31 @@ export default function Profile() {
         setImage(deleteImage)
     }
 
-    
+
 
     return (
         <div>
-            <Header/>
+            <Header />
             <div className="profile-container">
                 <div className="change-screen">
-                    
+
                     <button type='button' className={`change-button ${selected ? 'selected' : ''}`}>Profile</button>
                     <Link to="/appointments">
-                    <button type='button' className={`change-button ${!selected ? 'selected' : ''}`}>Appointments</button>
+                        <button type='button' className={`change-button ${!selected ? 'selected' : ''}`}>Appointments</button>
                     </Link>
                 </div>
                 <div className="profile-info">
                     <div className="choose-photo">
                         <img className='pro-image' src={image} alt="profile-image" />
-                        <input 
+                        <input
                             id="file-upload"
-                            type="file" 
-                            accept="image/*" 
+                            type="file"
+                            accept="image/*"
                             onChange={handleImageChange}
                             style={{ display: 'none' }}  // Hide the input visually
                         />
                         <h1>Abbes Bilel</h1>
-                        
+
 
                         <button type='button' className='photo-button delete-button' onClick={handleImageDelete}>Delete Photo</button>
                         <label htmlFor="file-upload" className="photo-button change-button">
@@ -159,7 +159,7 @@ export default function Profile() {
                     </div>
                     <div className="info-feild">
                         <h1>Change Password</h1>
-                        <form className="input-box"  onSubmit={handleReset}>
+                        <form className="input-box" onSubmit={handleReset}>
                             <div className='forgot-container'>
                                 <div className="input-feild">
                                     <input className='pass-input' type={showPassword ? 'text' : 'password'} placeholder='Old Password' onChange={(e) => setOldPassword(e.target.value)} />
@@ -168,7 +168,7 @@ export default function Profile() {
                                     </button>
                                 </div>
                                 <Link to="/forgotpass">
-                                <button type='button' className='forgot'>Forgot Password ?</button>
+                                    <button type='button' className='forgot'>Forgot Password ?</button>
                                 </Link>
                             </div>
                             <div>
@@ -190,16 +190,16 @@ export default function Profile() {
                                     {showPassword ? <i className="first fa-solid fa-eye"></i> : <i className="first fa-solid fa-eye-slash"></i>}
                                 </button>
                             </div>
-                            <button type='submit' className='save-changes change-pass'  disabled={!isFormValid()}>Change Password</button>
+                            <button type='submit' className='save-changes change-pass' disabled={!isFormValid()}>Change Password</button>
                             {/* {message && <p className="error-text">{message}</p>} */}
                             {message && <p className={`${message === "Password changed successfully." ? 'not-error' : 'error-text'}`}>{message}</p>}
-                            
+
                         </form>
                     </div>
                 </div>
 
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import bookIcon2 from '../../assets/message-circle2.svg'
+import bookIcon2 from '../../../assets/message-circle2.svg'
 import BookingButton from './BookingButton'
 
 export default function DoctorCard({ name, rating, spec, photo }) {
