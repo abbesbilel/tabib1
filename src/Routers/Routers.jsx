@@ -21,6 +21,8 @@ import {
     Success,
     VerifyCode,
     Appointments,
+    AdminOverview,
+    AdminPatient
 } from '../page/index';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 
@@ -51,6 +53,8 @@ const Routers = () => {
                     <Route path="/page" element={<DoctorOverview />} />
                     <Route path="/Page2" element={<DoctorAppointments />} />
                     <Route path="/Page3" element={<DoctorSettings />} />
+                    <Route path="/Page4" element={<AdminOverview />} />
+                    <Route path="/Page5" element={<AdminPatient />} />
                 </Routes>
             </Router>
         </div>

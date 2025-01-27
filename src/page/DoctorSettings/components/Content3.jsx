@@ -4,7 +4,7 @@ import Settings from '../../../components/Settings';
 function Content() {
   return (
     <>
-      <div className="contentt w-full h-full">
+      <div className="contentt w-full">
         {/* Start Head */}
         <Head />
         {/* End Head */}
