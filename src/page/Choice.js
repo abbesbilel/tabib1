@@ -1,13 +1,13 @@
 import React from 'react'
-import DzTabib from '../components/DzTabib/DzTabib';
+// import DzTabib from '../components/DzTabib/DzTabib';
 import ChoiCe from '../components/Choise/ChoiCe';
 
 const Choice = () => {
     return (
         <div className="">
-            <div className='tabib'>
+            {/* <div className='tabib'>
                 <DzTabib />
-            </div>
+            </div> */}
             <div className='login'>
                 <ChoiCe />
             </div>

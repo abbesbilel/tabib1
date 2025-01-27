@@ -36,7 +36,7 @@ const PersoNal = () => {
 
     return (
         <div>
-            <div className="containeru">
+            <div className="containeruu">
                 <div className="header2u">
                     <div className="signinu">
                         <h1>
@@ -52,8 +52,8 @@ const PersoNal = () => {
                         <img className="phototabibu" src={tabib} alt="tabib" />
                     </div>
                 </div>
-                <div className="container2uP">
-                    <div className="headeruP">
+                <div className="container2u">
+                    <div className="headeru">
                         <div className="textu">
                             <h2>Personal Information</h2>
                         </div>
@@ -80,7 +80,7 @@ const PersoNal = () => {
                         </div>
                         <div className="inputu">
                             <input
-                                className="input1u"
+                                className="input1uu"
                                 type="email"
                                 placeholder="Email address"
                                 name="email"
@@ -90,7 +90,7 @@ const PersoNal = () => {
                         </div>
                         <div className="inputu">
                             <input
-                                className="input1u"
+                                className="input1uu"
                                 type="number"
                                 placeholder="Contact number"
                                 name="contactNumber"
@@ -100,7 +100,7 @@ const PersoNal = () => {
                         </div>
                         <div className="inputu">
                             <input
-                                className="input1u"
+                                className="input1uu"
                                 type="password"
                                 placeholder="Password"
                                 name="password"
@@ -110,7 +110,7 @@ const PersoNal = () => {
                         </div>
                         <div className="inputu">
                             <input
-                                className="input1u"
+                                className="input1uu"
                                 type="password"
                                 placeholder="Confirm password"
                                 name="confirmPassword"

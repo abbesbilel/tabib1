@@ -12,6 +12,20 @@
     overflow: hidden;
 }
 
+@media (max-width:991px) {
+    .diagonal-container {
+        flex-direction: column;
+    }
+    .left-side img, .right-side img {
+        display: none;
+    }
+    .orcontainer {
+        top: -7% !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+}
+
 .left-side,
 .right-side {
     flex: 1;
@@ -43,13 +57,13 @@
 
 .left-side {
     background-color: #ffffff;
-    left: -130px;
+    /* left: -130px; */
 
 }
 
 .right-side {
     background-color: #CAF0F8;
-    left: -120px;
+    /* left: -120px; */
 
 }
 
@@ -73,9 +87,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: -383px;
-    top: -265px
+    position: absolute;
+    left: -4.3%;
+    top: 50%; 
+ 
 }
 
 .or {
@@ -88,12 +103,13 @@
 
 .patient {
     width: 273.85px;
-    height: 430.65px;
+    height: 320px;
+
 }
 
 .doctor {
     width: 238.1px;
-    height: 396.98px;
+    height: 320px;
 }
 
 .register-container {

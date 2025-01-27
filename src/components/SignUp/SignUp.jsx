@@ -98,7 +98,7 @@ const SignUp = () => {
         };
 
     return (
-        <div className="containeru">
+        <div className="containeruu">
             <div className="header2u">
                 <div className="signinu">
                     <h1>
@@ -144,7 +144,7 @@ const SignUp = () => {
                     </div>
                     <div className="inputu">
                     <input
-                            className="input1u"
+                            className="input1uu"
                             type="text"
                             placeholder="usernamee"
                             name="username"
@@ -156,7 +156,7 @@ const SignUp = () => {
                     </div>
                     <div className="inputu">
                         <input
-                            className="input1u"
+                            className="input1uu"
                             type="email"
                             placeholder="Email address"
                             name="email"
@@ -167,7 +167,7 @@ const SignUp = () => {
                     </div>
                     <div className="inputu">
                         <input
-                            className="input1u"
+                            className="input1uu"
                             type="number"
                             placeholder="Contact number"
                             name="contact"
@@ -179,7 +179,7 @@ const SignUp = () => {
                     
                     <div className="inputu">
                         <input
-                            className="input1u"
+                            className="input1uu"
                             type="text"
                             placeholder="Gender"
                             name="gender"
@@ -190,7 +190,7 @@ const SignUp = () => {
                     </div>
                     <div className="inputu">
                         <input
-                            className="input1u"
+                            className="input1uu"
                             type="date"
                             placeholder="YYYY-MM-DD"
                             name="dateOfBirth"
@@ -201,7 +201,7 @@ const SignUp = () => {
                     </div>
                     <div className="inputu">
                         <input
-                            className="input1u"
+                            className="input1uu"
                             type="password"
                             placeholder="Password"
                             name="password"
@@ -212,7 +212,7 @@ const SignUp = () => {
                     </div>
                     <div className="inputu">
                         <input
-                            className="input1u"
+                            className="input1uu"
                             type="password"
                             placeholder="Confirm password"
                             name="confirmPassword"

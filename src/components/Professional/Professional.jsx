@@ -46,7 +46,7 @@ const ProfessioNal = () => {
     return (
         <div>
             <div>
-                <div className="containeru">
+                <div className="containeruu">
                     <div className="header2u">
                         <div className="signinu">
                             <h1>
@@ -62,8 +62,8 @@ const ProfessioNal = () => {
                             <img className="phototabibu" src={tabib} alt="tabib" />
                         </div>
                     </div>
-                    <div className="container2uPP">
-                        <div className="headeruP">
+                    <div className="container2u">
+                        <div className="headeru">
                             <div className="textu">
                                 <h2>Professional Information</h2>
                             </div>
@@ -72,7 +72,7 @@ const ProfessioNal = () => {
                         <div className="inputsu">
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu"
                                     type="number"
                                     placeholder="Medical Licence number"
                                     name="medicalLicence"
@@ -82,7 +82,7 @@ const ProfessioNal = () => {
                             </div>
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Speciality"
                                     name="speciality"
@@ -92,7 +92,7 @@ const ProfessioNal = () => {
                             </div>
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="CV"
                                     name="cv"
@@ -112,7 +112,7 @@ const ProfessioNal = () => {
                             </div>
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Languages Spoken"
                                     name="languages"

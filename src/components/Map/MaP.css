@@ -35,6 +35,12 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+@media (max-width:991px) {
+    .header2u .signinu h1 {
+        width: 200px;
+    }
+}
+
 .header2u .signinu span {
     color: #6F3AFA;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -48,6 +54,12 @@
     line-height: 28px;
 }
 
+@media (max-width:991px) {
+    .header2u .registeru {
+        display: none;
+    }
+}
+
 .header2u .registeru span {
     color: #6F3AFA;
     cursor: pointer;
@@ -57,6 +69,12 @@
     width: 457px;
     height: 457px;
     justify-content: center;
+}
+
+@media (max-width:991px) {
+    .header2u .photou {
+        display: none;
+    }
 }
 
 .containerCarte {
@@ -147,6 +165,15 @@
     width: 502px;
     margin-bottom: 50px;
 
+}
+
+@media (max-width:991px) {
+    .submit-containeruP {
+        width: 300px !important;
+    }
+    .submit-containeruP .submituP  {
+        width: 300px !important;
+    }
 }
 
 .submit-containeruP .submituP {

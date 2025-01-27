@@ -28,7 +28,7 @@ const AvaIl = () => {
     return (
         <div>
             <div>
-                <div className="containeru">
+                <div className="containeruu">
                     <div className="header2u">
                         <div className="signinu">
                             <h1>Sign Up to <span>DZ</span>TABIB</h1>
@@ -41,17 +41,17 @@ const AvaIl = () => {
                             <img className="phototabibu" src={tabib} alt="tabib" />
                         </div>
                     </div>
-                    <div className="container2uPP">
-                        <div className="headeruP">
+                    <div className="container2u">
+                        <div className="headeru">
                             <div className="textu">
                                 <h2>Availability Management</h2>
                             </div>
                             <div className="underlineWH">Working Hours</div>
                         </div>
                         <div className="inputsu">
-                            <div className="inputSoc">
+                            <div className="inputu">
                                 <input
-                                    className="input1Soc"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Opening Hour"
                                     name="openingHour"
@@ -59,9 +59,9 @@ const AvaIl = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            <div className="inputSoc">
+                            <div className="inputu">
                                 <input
-                                    className="input1Soc"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Closing Hour"
                                     name="closingHour"
@@ -69,9 +69,9 @@ const AvaIl = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            <div className="inputSoc">
+                            <div className="inputu">
                                 <input
-                                    className="input1Soc"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Start Break (Optional)"
                                     name="startBreak"
@@ -79,9 +79,9 @@ const AvaIl = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            <div className="inputSoc">
+                            <div className="inputu">
                                 <input
-                                    className="input1Soc"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="End Break (Optional)"
                                     name="endBreak"
@@ -89,8 +89,8 @@ const AvaIl = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            <Link to="/map"><div className="submit-containeruSoc">
-                                <div className="submituSoc" onClick={handleSubmit}>Next</div>
+                            <Link to="/map"><div className="submit-containeruday">
+                                <div className="submituday" onClick={handleSubmit}>Next</div>
                             </div>
                             </Link>
                         </div>

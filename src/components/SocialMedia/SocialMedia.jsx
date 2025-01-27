@@ -55,7 +55,7 @@ const SocialMedia = () => {
     return (
         <div>
             <div>
-                <div className="containeru">
+                <div className="containeruu">
                     <div className="header2u">
                         <div className="signinu">
                             <h1>
@@ -72,8 +72,8 @@ const SocialMedia = () => {
                             <img className="phototabibu" src={tabib} alt="tabib" />
                         </div>
                     </div>
-                    <div className="container2uPP">
-                        <div className="headeruP">
+                    <div className="container2u">
+                        <div className="headeru">
                             <div className="textu">
                                 <h2>Social Media</h2>
                             </div>
@@ -82,9 +82,9 @@ const SocialMedia = () => {
                         {message && <div className="message">{message}</div>}
                         {error && <div className="error">{error}</div>}
                         <div className="inputsu">
-                            <div className="inputSoc">
+                            <div className="inputu">
                                 <input
-                                    className="input1Soc"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Facebook Link"
                                     name="facebook"
@@ -92,9 +92,9 @@ const SocialMedia = () => {
                                     onChange={handleInputChange}
                                 />
                             </div>
-                            <div className="inputSoc">
+                            <div className="inputu">
                                 <input
-                                    className="input1Soc"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Instagram Link"
                                     name="instagram"
@@ -102,9 +102,9 @@ const SocialMedia = () => {
                                     onChange={handleInputChange}
                                 />
                             </div>
-                            <div className="inputSoc">
+                            <div className="inputu">
                                 <input
-                                    className="input1Soc"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Linkedin Link"
                                     name="linkedin"
@@ -112,9 +112,9 @@ const SocialMedia = () => {
                                     onChange={handleInputChange}
                                 />
                             </div>
-                            <div className="inputSoc">
+                            <div className="inputu">
                                 <input
-                                    className="input1Soc"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Twitter Link"
                                     name="twitter"
@@ -123,8 +123,8 @@ const SocialMedia = () => {
                                 />
                             </div>
                             <Link to="/Page">
-                            <div className="submit-containeruSoc">
-                                <div className="submituSoc" onClick={handleSubmit}>
+                            <div className="submit-containeruday">
+                                <div className="submituday" onClick={handleSubmit}>
                                     Done
                                 </div>
                             </div>

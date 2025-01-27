@@ -6,9 +6,9 @@ import PersoNal from '../components/Personal/Personal';
 const Personal = () => {
     return (
         <div className="">
-            <div className='tabib'>
+            {/* <div className='tabib'>
                 <DzTabib />
-            </div>
+            </div> */}
             <div className='login'>
                 <PersoNal />
             </div>
