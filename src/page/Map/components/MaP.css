@@ -37,7 +37,7 @@
 
 @media (max-width:991px) {
     .header2u .signinu h1 {
-        width: 200px;
+        width: 200px !important;
     }
 }
 
