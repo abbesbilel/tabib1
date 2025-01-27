@@ -429,6 +429,24 @@
     max-width: 600px;
 }
 
+.team-container .section-view {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.team-container .section-view .view-button {
+    background-color: #3A8EF6;
+    width: fit-content;
+    padding: 16px;
+    border-radius: 16px;
+    color: white;
+}
+
+.team-container .section-view .view-button:hover {
+    background-color: #80b9ff;
+}
+
 .doctor-card-container .doc-image {
     min-width: fill;
     width: 100%;

@@ -4,6 +4,7 @@ import SectionHeader from './SectionHeader';
 import doctorImage from './assets/doctor.png';
 import testImage from './assets/test-doctor.png';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Team() {
     const [doctors, setDoctors] = useState([]);
@@ -24,7 +25,12 @@ export default function Team() {
 
     return (
         <div className='team-container' id='team'>
+            <div className='section-view'>
             <SectionHeader sectionName={'Our Team'} />
+            <Link to="/selection">
+            <button className='view-button'>View all</button>
+            </Link>
+            </div>
             <div className="cards-container">
                 {doctors.map((doctor, index) => (
                     <DoctorCard
