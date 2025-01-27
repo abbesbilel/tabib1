@@ -4,18 +4,22 @@
 }
 
 .filter-nav {
-    scrollbar-width: none;
-    width: 1015px;
+
+    margin-right: 20px;
     margin-left: 70px;
     margin-top: 15px;
     margin-bottom: 25px;
+    overflow: scroll;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
 }
+
 
 .filter-nav img {
     width: 40px;
     height: 40px;
     position: relative;
-    top: 15px;
 }
 
 .filter-button {
