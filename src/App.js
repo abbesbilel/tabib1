@@ -1,29 +1,23 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Sign from './page/Sign'
-import Signup from './page/SignUp';
-import Personal from './page/Personal';
-import Professional from './page/Professional';
-import Practiceinformation from './page/Practiceinformation';
-import Socialmedia from './page/Socialmedia';
-import Avail from './page/Avail';
-import Days from './page/Days';
-import Mapa from './page/Mapa';
-import Choice from './page/Choice';
-import Appoin from './page/Appoin';
-import Selection from './page/Selection';
+import Sign from './page/LoginSignIn/Sign'
+import Signup from './page/SignUp/SignUp';
+import Personal from './page/Personal/Personal';
+import Professional from './page/Professional/Professional';
+import Practiceinformation from './page/Practiceinformation/Practiceinformation';
+import Socialmedia from './page/SocialMedia/Socialmedia';
+import Avail from './page/Avail/Avail';
+import Days from './page/Days/Days';
+import Mapa from './page/Map/Mapa';
+import Choice from './page/Choise/Choice';
+import Appoin from './page/Appoint/Appoin';
+import Selection from './page/Selection/Selection';
 import ForgotPass from './Forgot/ForgotPass'
 import LandingPage from './Landing/LandingPage'
 import Profile from "./Profile/components/Profile"
 import Appointments from "./Profile/components/Appointments"
-import Page from './components/Page';
-import Settings from './components/Settings';
-import Wrapper from './components/Wrapper';
-import Page2 from './components/Page2'
-import Page3 from './components/Page3'
-
-// Font Awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Page from './page/DoctorOverview/Page';
+import Page2 from './page/DoctorAppointments/Page2'
+import Page3 from './page/DoctorSettings/Page3'
 
 function App() {
   return (
@@ -45,24 +39,24 @@ function App() {
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path="/landingpage" element={<LandingPage />} />
-          <Route
-            path="/page"
-            element={
-              <>
-                <Page />
-              </>
-            }
-          />
+        <Route
+          path="/page"
+          element={
+            <>
+              <Page />
+            </>
+          }
+        />
 
-          {/* Appointments Route */}
-          <Route path="/Page2" element={<Page2 />} />
+        {/* Appointments Route */}
+        <Route path="/Page2" element={<Page2 />} />
 
-          {/* Settings Route */}
-          <Route path="/Page3" element={<Page3 />} />
+        {/* Settings Route */}
+        <Route path="/Page3" element={<Page3 />} />
 
-          {/* Wrapper Route */}
-        </Routes>
-      
+        {/* Wrapper Route */}
+      </Routes>
+
     </BrowserRouter>
   );
 }
