@@ -167,7 +167,7 @@ export default function Profile() {
                                         {showPassword ? <i className="first fa-solid fa-eye"></i> : <i className="first fa-solid fa-eye-slash"></i>}
                                     </button>
                                 </div>
-                                <Link to="/forgotpass">
+                                <Link to="/ForgotPassword">
                                     <button type='button' className='forgot'>Forgot Password ?</button>
                                 </Link>
                             </div>

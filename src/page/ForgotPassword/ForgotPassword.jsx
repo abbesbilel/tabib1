@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import sadDoctorImage from '../../../assets/sad_doctor.png'
-import logoImage from '../../../assets/DZTABIB.png'
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import sadDoctorImage from '../../assets/sad_doctor.png';
+import logoImage from '../../assets/DZTABIB.png';
 import './ForgotPassword.css';
+import './ForgotPass.css'
 
-const ForgotPassword = ({ onNext }) => {
+const ForgotPassword = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
@@ -14,7 +17,7 @@ const ForgotPassword = ({ onNext }) => {
         // Simulate sending email
         if (email) {
             setMessage('A verification code has been sent to your email.');
-            onNext();  // Proceed to next step (code verification)
+            navigate('/VerifyCode'); // Navigate to the next page
         } else {
             setMessage('Please enter a valid email.');
         }
@@ -31,7 +34,7 @@ const ForgotPassword = ({ onNext }) => {
                 </div>
                 <div className="content">
                     <h2>Forgot Password</h2>
-                    <p>Enter your email for the verification proccess,we will send 4 digits code to your email.</p>
+                    <p>Enter your email for the verification process, we will send a 4-digit code to your email.</p>
                     <form onSubmit={handleSubmit}>
                         <input
                             className='address'

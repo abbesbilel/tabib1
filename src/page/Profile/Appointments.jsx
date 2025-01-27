@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import Footer from "../../../components/Footer"
-import Header from "./Header"
-import ConsultationCard from './ConsultationCard';
-import '../ProfilePage.css'
+import Footer from "../../components/Footer"
+import Header from "./components/Header"
+import ConsultationCard from './components/ConsultationCard';
+import './ProfilePage.css'
 
 const Appointments = () => {
 

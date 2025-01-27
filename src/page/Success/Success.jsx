@@ -1,8 +1,9 @@
 import React from 'react'
-import sadDoctorImage from '../../../assets/sad_doctor.png';
-import logoImage from '../../../assets/DZTABIB.png';
-import check from '../../../assets/upload.svg'
+import sadDoctorImage from '../../assets/sad_doctor.png';
+import logoImage from '../../assets/DZTABIB.png';
+import check from '../../assets/upload.svg'
 import './Success.css'
+import '../ForgotPassword/ForgotPass.css'
 import { Link } from 'react-router-dom';
 
 export default function Success() {

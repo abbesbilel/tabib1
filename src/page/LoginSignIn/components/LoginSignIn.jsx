@@ -90,7 +90,7 @@ const LoginSignIn = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Link to="/forgotpass">
+          <Link to="/ForgotPassword">
             <div className='forgetpass'><p>Forgot Password ?</p></div>
           </Link>
           <div className='submit-container'>

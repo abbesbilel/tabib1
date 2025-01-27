@@ -1,12 +1,15 @@
 import React, { useState, useRef } from 'react';
-import sadDoctorImage from '../../../assets/sad_doctor.png';
-import logoImage from '../../../assets/DZTABIB.png';
+import sadDoctorImage from '../../assets/sad_doctor.png';
+import logoImage from '../../assets/DZTABIB.png';
 import './VerifyCode.css';
+import '../ForgotPassword/ForgotPass.css'
+import { useNavigate } from 'react-router-dom';
 
-const VerifyCode = ({ onNext }) => {
+const VerifyCode = () => {
     const [code, setCode] = useState('');
     const [error, setError] = useState('');
     const [resendTimer, setResendTimer] = useState(false);
+    const navigate = useNavigate();
     
 
     const inputRefs = useRef([]);
@@ -14,7 +17,7 @@ const VerifyCode = ({ onNext }) => {
     const handleVerify = (e) => {
         e.preventDefault();
         if (code === '1234') {
-            onNext();
+            navigate('/ResetPassword');
         } else {
             setError('Invalid code. Try again.');
         }

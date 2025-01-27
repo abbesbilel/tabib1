@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import sadDoctorImage from '../../../assets/sad_doctor.png';
-import logoImage from '../../../assets/DZTABIB.png';
+import sadDoctorImage from '../../assets/sad_doctor.png';
+import logoImage from '../../assets/DZTABIB.png';
 import './ResetPassword.css'
+import '../ForgotPassword/ForgotPass.css'
+import { useNavigate } from 'react-router-dom';
 
 const ResetPassword = ({ onNext }) => {
     const [password, setPassword] = useState('');
@@ -9,6 +11,7 @@ const ResetPassword = ({ onNext }) => {
     const [message, setMessage] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [strength, setStrength] = useState('');
+    const navigate = useNavigate();
 
     const handleReset = (e) => {
         e.preventDefault();
@@ -17,7 +20,7 @@ const ResetPassword = ({ onNext }) => {
             return;
         }
         if (password === confirmPassword) {
-            onNext();
+            navigate('/Success');
         } else {
             setMessage('Passwords do not match.');
         }
