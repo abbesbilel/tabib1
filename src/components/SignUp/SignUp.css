@@ -4,12 +4,29 @@
     font-family: "Open Sans", serif;
 }
 
-.containeru {
+.containeruu {
     width: 502px;
     height: 514.46px;
     background-color: white;
     display: flex;
-    position: absolute;
+    /* position: absolute; */
+    margin: auto;
+    justify-content: center;
+}
+
+@media (max-width:991px) {
+    .containeruu {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 160px;
+        max-width: 100%;
+    }
+    .header2uu .registeru, .textu {
+        display: none;
+    }
+    .header2uu {
+        margin-bottom: 30px;
+    }
 }
 
 .headeru {
@@ -17,14 +34,15 @@
     height: 36px;
 }
 
-.header2u {
+.header2uu {
     position: relative;
     top: 165px;
     left: 20px;
     background-color: white;
+    align-self: flex-end;
 }
 
-.header2u .signinu h1 {
+.header2uu .signinu h1 {
     margin-top: 0px;
     width: 521px;
     height: 55px;
@@ -34,12 +52,19 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.header2u .signinu span {
+@media (max-width:991px) {
+    .header2uu .signinu h1 {
+        width: 380px;
+        margin: 10px auto;
+    }
+}
+
+.header2uu .signinu span {
     color: #6F3AFA;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.header2u .registeru {
+.header2uu .registeru {
     width: 308px;
     height: 56px;
     font-weight: 400;
@@ -47,12 +72,12 @@
     line-height: 28px;
 }
 
-.header2u .registeru span {
+.header2uu .registeru span {
     color: #6F3AFA;
     cursor: pointer;
 }
 
-.header2u .photou {
+.header2uu .photou {
     width: 457px;
     height: 457px;
     justify-content: center;
@@ -64,8 +89,7 @@ a {
 
 .container2u {
     position: relative;
-    top: 90px;
-    left: 145px;
+    top: 100px;
 }
 
 .textu h2 {
@@ -104,7 +128,7 @@ a {
     gap: 22px;
 }
 
-.inputu .input1u {
+.inputu .input1uu {
     width: 502px;
     height: 62px;
     background-color: #CAF0F8;
@@ -113,6 +137,13 @@ a {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 10px;
+}
+
+@media (max-width:991px) {
+    .inputu .input1uu { 
+        width: 300px;
+        margin: 8px auto;
+    }
 }
 
 .inputu .input2u {
@@ -157,6 +188,18 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width:991px) {
+    .submit-containeru .submitu {
+        width: 300px;
+        margin: 10px auto;
+    }
+
+    .signupu {
+        width: 300px !important;
+        margin: auto;
+    }
 }
 
 .signupu {

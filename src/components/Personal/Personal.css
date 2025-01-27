@@ -4,13 +4,13 @@
     font-family: "Open Sans", serif;
 }
 
-.containeru {
+/* .containeru {
     width: 502px;
     height: 514.46px;
     background-color: white;
     display: flex;
     position: absolute;
-}
+} */
 
 .headeru {
     width: 115px;
@@ -100,6 +100,18 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 10px;
+}
+
+@media (max-width: 991px) {
+    .inputufn .inpu {
+        width: 300px;
+        margin: auto;
+        gap: 0px;
+    }
+
+    .inputufn {
+        flex-direction: column;
+    }
 }
 
 .inputufn {

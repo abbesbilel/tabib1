@@ -33,7 +33,7 @@ const DaYs = () => {
     return (
         <div>
             <div>
-                <div className="containeru">
+                <div className="containeruu">
                     <div className="header2u">
                         <div className="signinu">
                             <h1>
@@ -50,8 +50,8 @@ const DaYs = () => {
                             <img className="phototabibu" src={tabib} alt="tabib" />
                         </div>
                     </div>
-                    <div className="container2uPP">
-                        <div className="headeruP">
+                    <div className="container2u">
+                        <div className="headeru">
                             <div className="textu">
                                 <h2>Availability Management</h2>
                             </div>

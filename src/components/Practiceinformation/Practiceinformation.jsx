@@ -42,7 +42,7 @@ const PracticeiNformation = () => {
     return (
         <div>
             <div>
-                <div className="containeru">
+                <div className="containeruu">
                     <div className="header2u">
                         <div className="signinu">
                             <h1>
@@ -58,8 +58,8 @@ const PracticeiNformation = () => {
                             <img className="phototabibu" src={tabib} alt="tabib" />
                         </div>
                     </div>
-                    <div className="container2uPP">
-                        <div className="headeruP">
+                    <div className="container2u">
+                        <div className="headeru">
                             <div className="textu">
                                 <h2>Practice Information</h2>
                             </div>
@@ -68,7 +68,7 @@ const PracticeiNformation = () => {
                         <div className="inputsu">
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Clinic Name"
                                     name="clinicName"
@@ -78,7 +78,7 @@ const PracticeiNformation = () => {
                             </div>
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Consultation Fee                                                                                                     DA"
                                     name="consultationFee"
@@ -94,7 +94,7 @@ const PracticeiNformation = () => {
                             </div>
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Insurance/Mutuelle Accepted"
                                     name="insuranceAccepted"
@@ -104,7 +104,7 @@ const PracticeiNformation = () => {
                             </div>
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu uu"
                                     type="text"
                                     placeholder="Teleconsultation"
                                     disabled

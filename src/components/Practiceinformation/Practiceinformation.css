@@ -12,6 +12,21 @@
     position: absolute;
 }
 
+@media (max-width:991px) {
+
+    .uu {
+        margin-left: 50px !important;
+
+    }
+
+    @media (max-width:991px) {
+        .submit-containeruP { 
+            margin: auto;
+        }
+    }
+}
+
+
 .headeru {
     width: 115px;
     height: 36px;

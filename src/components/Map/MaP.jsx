@@ -26,7 +26,7 @@ const MaP = () => {
     return (
         <div>
             <div>
-                <div className="containeru">
+                <div className="containeruu">
                     <div className="header2u">
                         <div className="signinu">
                             <h1>
@@ -42,8 +42,8 @@ const MaP = () => {
                             <img className="phototabibu" src={tabib} alt="tabib" />
                         </div>
                     </div>
-                    <div className="containerCarte">
-                        <div className="headeruP">
+                    <div className="container2u">
+                        <div className="headeru">
                             <div className="textu">
                                 <h2>Location Information</h2>
                             </div>
@@ -52,7 +52,7 @@ const MaP = () => {
                         <div className="inputsu">
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Address"
                                     name="address"
@@ -62,7 +62,7 @@ const MaP = () => {
                             </div>
                             <div className="inputu">
                                 <input
-                                    className="input1u"
+                                    className="input1uu"
                                     type="text"
                                     placeholder="Map Location"
                                     name="mapLocation"
@@ -83,8 +83,8 @@ const MaP = () => {
                                     ></iframe>
                                 </div>
                             </div>
-                            <div className="submit-containeruP">
-                                <Link to="/Socialmedia"><div className="submituP" onClick={handleSubmit}>
+                            <div className="submit-containeruday">
+                                <Link to="/Socialmedia"><div className="submituday" onClick={handleSubmit}>
                                     Done
                                 </div>
                                 </Link>

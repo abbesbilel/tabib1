@@ -4,7 +4,7 @@ import Wrapper from './Wrapper';
 function Content() {
   return (
     <>
-      <div className="content w-full">
+      <div className="contentt w-full h-full">
         {/* Start Head */}
         <Head />
         {/* End Head */}

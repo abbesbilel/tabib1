@@ -7,9 +7,9 @@ import Registerhere from '../components/Registerhere/Registerhere';
 const Signup = () => {
     return (
         <div className="">
-          <div className='tabib'>
+          {/* <div className='tabib'>
             <DzTabib />
-          </div>
+          </div> */}
           <div className='login'>
             <SignUp />
           </div>
