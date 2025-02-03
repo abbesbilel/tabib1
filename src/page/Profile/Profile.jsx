@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom';
 import profileImage from '../../assets/profile.png'
 import deleteImage from '../../assets/empty_profile_image.jpg'
 import Footer from "../../components/Footer"
@@ -23,6 +23,9 @@ export default function Profile() {
     const [image, setImage] = useState(profileImage);
     const [infoMessage, setInfoMessage] = useState('')
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const { userId } = useParams();
+    const [username, setUserName] = useState('')
+    console.log(userId)
 
 
 
@@ -49,10 +52,36 @@ export default function Profile() {
         }
     };
 
-    const handleSaveChanges = (e) => {
+    const handleSaveChanges = async (e) => {
         e.preventDefault();
-        setInfoMessage('changes saved successfully');
-    }
+        
+        const updatedData = {
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            phone: number
+        };
+    
+        try {
+            const response = await fetch(`http://localhost:5000/api/profile/1`, {
+                method: "PUT",  // or PATCH
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(updatedData)
+            });
+    
+            if (response.ok) {
+                setInfoMessage("Changes saved successfully!");
+            } else {
+                setInfoMessage("Failed to save changes. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error updating profile:", error);
+            setInfoMessage("Error saving changes.");
+        }
+    };
+    
 
     const checkPasswordStrength = (password) => {
         let strengthLevel = 0;
@@ -83,12 +112,37 @@ export default function Profile() {
         }
     };
 
+ 
+    useEffect(() => {
+        fetch('http://localhost:5000/api/patients')
+            .then((response) => response.json())
+            .then((data) => {
+                const patient = data.find((patient) => patient.user_id == userId);
+                console.log('the userrrrrr id: ', userId)
+                console.log('Patient found:', patient);
+                setFirstName(patient.first_name);
+                setLastName(patient.last_name);
+                setEmail(patient.email);
+                setNumber(patient.phone);
+                setUserName(patient.username);
+
+                if (patient && patient.user_id) {
+                    console.log(patient)
+                } else {
+                    console.log('No patient found with the specified email or user_id is missing.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error fetching profile data:', error);
+            });
+    }, []);
+
     const isFormValid = () => {
         return password.length > 0 && confirmPassword.length > 0 && oldPassword.length > 0;
     };
 
     const isValid = () => {
-        return firstName.length > 0 && lastName.length > 0 && number.length > 9;
+        return firstName.length > 0 && lastName.length > 0;
     }
 
     const handleImageChange = (e) => {
@@ -107,7 +161,7 @@ export default function Profile() {
 
     return (
         <div>
-            <Header />
+            <Header username={username}/>
             <div className="profile-container">
                 <div className="change-screen">
 

@@ -3,7 +3,7 @@ import logoImage from '../../../assets/DZTABIB.png'
 import profileImage from '../../../assets/profile.png'
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({username}) {
 
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
@@ -33,7 +33,7 @@ export default function Header() {
             <div className="profile">
                 <img className='profile-image' src={profileImage} alt="profile-image" />
                 <div className="profile-text">
-                    <h2>Abbes Bilel</h2>
+                    <h2>{username}</h2>
                     <button type='button' className='caret-button' onClick={handleCaretClick}>
                         <i className="fa-solid fa-caret-down"></i>
                     </button>

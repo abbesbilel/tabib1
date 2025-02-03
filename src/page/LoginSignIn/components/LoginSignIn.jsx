@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './LoginSignIn.css';
 import tabib from '../../../assets/tabib.png';
 import axios from 'axios';
@@ -10,6 +10,7 @@ const LoginSignIn = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [userId, setUserId] = useState(null);
 
   // Gestion de la soumission
   const handleLogin = async () => {
@@ -21,30 +22,28 @@ const LoginSignIn = () => {
     setIsLoading(true);
     setError('');
 
-
     if (email === 'admin' && password === 'admin') {
       // Special case for admin credentials: redirect to /page4
       console.log('Admin login detected. Redirecting to /page4');
       window.location.href = '/page4';
-      return; 
+      return;
     } else {
-
       try {
         const response = await axios.post('http://localhost:5000/auth/login', {
           email,
           password,
         });
-  
+
         if (response.status === 200) {
           // Login successful
           const { accessToken } = response.data;
           console.log('Login successful. Access Token:', accessToken);
-  
+
           // Save the access token to localStorage or context
           localStorage.setItem('accessToken', accessToken);
-  
-          // Redirect to the landing page or dashboard
-          window.location.href = '/landingpage';
+
+          // Redirect to the landing page with userId
+          window.location.href = `/landingpage/${userId}`;
         }
       } catch (error) {
         if (error.response) {
@@ -58,11 +57,32 @@ const LoginSignIn = () => {
       } finally {
         setIsLoading(false);
       }
-    };
-
-
     }
+  };
 
+  // Fetch patient data and set userId
+  useEffect(() => {
+    fetch('http://localhost:5000/api/patients')
+      .then((response) => response.json())
+      .then((data) => {
+        const patient = data.find((patient) => patient.email === email);
+        console.log('Patient found:', patient);
+
+        if (patient && patient.user_id) {
+          setUserId(patient.user_id); // Update userId state
+        } else {
+          console.log('No patient found with the specified email or user_id is missing.');
+        }
+      })
+      .catch((error) => {
+        console.error('Error fetching profile data:', error);
+      });
+  }, [email]);
+
+  // Log userId whenever it changes
+  useEffect(() => {
+    console.log('Updated userId:', userId);
+  }, [userId]);
 
   return (
     <div className='containerr'>

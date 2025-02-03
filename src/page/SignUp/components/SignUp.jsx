@@ -80,9 +80,10 @@ const SignUp = () => {
                     date_of_birth: formData.dateOfBirth,
                     account_type: 'patient',
                     gender: formData.gender, // Gender is already uppercase
-                    contact: formData.contact,
+                    phone: formData.contact,
                 }),
             });
+            console.log(formData.contact)
             const data = await response.json();
 
             if (response.ok) {

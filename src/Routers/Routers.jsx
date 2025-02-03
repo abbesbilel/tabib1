@@ -43,9 +43,9 @@ const Routers = () => {
                     <Route path='/choice' element={<Choise />}></Route>
                     <Route path='/appoint' element={<Appoint />}></Route>
                     <Route path='/selection' element={<Selection />}></Route>
-                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/profile/:userId" element={<Profile />} />
                     <Route path="/appointments" element={<Appointments />} />
-                    <Route path="/landingpage" element={<Landing />} />
+                    <Route path="/landingpage/:userId" element={<Landing />} />
                     <Route path="/ForgotPassword" element={<ForgotPassword />} />
                     <Route path="/ResetPassword" element={<ResetPassword />} />
                     <Route path="/Success" element={<Success />} />

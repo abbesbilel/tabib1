@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import logoImage from '../../../assets/DZTABIB.png'
 import profileImage from '../../../assets/profile.png'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export default function Header() {
 
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
     const [activeSection, setActiveSection] = useState('home'); // Track the active section
-    const [isLogedIn, setIsLogedIn] = useState(true)
+    const [isLogedIn, setIsLogedIn] = useState(true);
+    const [username, setUserName] = useState('')
+    const { userId } = useParams();
+    console.log(userId)
 
     const handleCaretClick = () => {
         setIsDropdownVisible(!isDropdownVisible);
@@ -40,6 +43,18 @@ export default function Header() {
         };
     }, []);
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/api/profile/${userId}`)
+        
+            .then((response) => response.json())
+            .then((data) => {
+                // console.log(data);
+                setUserName(data.username); // Update the username state if needed
+            })
+            .catch((error) => {
+                console.error('Error fetching profile data:', error);
+            });
+    }, []);
 
     return (
         <div className='header-container1'>
@@ -67,11 +82,11 @@ export default function Header() {
 
             {isLogedIn ? (
                 <div className="profile">
-                    <Link to="/profile">
+                    <Link to={`/profile/${userId}`}>
                         <img className='profile-image' src={profileImage} alt="profile-image" />
                     </Link>
                     <div className="profile-text">
-                        <h2>Abbes Bilel</h2>
+                        <h2>{username}</h2>
                         <button type='button' className='caret-button' onClick={handleCaretClick}>
                             <i className="fa-solid fa-caret-down"></i>
                         </button>
